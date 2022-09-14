@@ -1,0 +1,8 @@
+setuptools
+sklearn
+matplotlib
+pandas
+mlflow
+dvc
+cohere
+pep8
