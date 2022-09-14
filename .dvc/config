@@ -1,0 +1,4 @@
+[core]
+    remote = llm-remote
+['remote "llm-remote"']
+    url = gdrive://1l21o3hnL1-a-fcOhFQzzvB5KadE2Y9dC
