@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <script src="js/jquery-2.1.0.min.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <h1>Interact with Cohere</h1>
+
+  <h3>Job descriptions</h3>
+
+  <form action="{{ url_for('home') }}" method="post">
+    <hr />
+    <label for="j_d">Job Description:</label>
+    <textarea id="j_d" name="j_d" rows="4" cols="50" required="true">
+    </textarea>
+
+    <label for="num_example">Number of Examples</label>
+    <input
+      type="number"
+      value="3"
+      id="num_example"
+      min="1"
+      max="5"
+      name="num_example"
+      placeholder="Number of Examples"
+      required
+    />
+
+    <label for="num_token">Number of Tokens</label>
+    <input
+      type="number"
+      value="100"
+      id="num_token"
+      min="100"
+      max="250"
+      name="num_token"
+      placeholder="Number of Tokens"
+      required
+    />
+
+    <label for="model">Model:</label>
+    <select id="model" name="model">
+      <option value="1">Default(xlarge)</option>
+      <option value="2">Fine Tuned</option>
+    </select>
+
+    <label for="prompt_type">Prompt Type:</label>
+    <select id="prompt_type" name="prompt_type">
+      <option value="1">Default(Most 3 similar)</option>
+      <option value="2">Random</option>
+    </select>
+
+    <input type="submit" value="Submit" />
+  </form>
+</body>
